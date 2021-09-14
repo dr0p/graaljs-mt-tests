@@ -1,3 +1,9 @@
+/*
+This is a very crude torture example in multi threading with the modified GraalJS. This example should not crash, BUT will
+experience concurrency issues - the counter will almost never be correct and this is expected
+
+*/
+
 const threadCount = 12;
 let counter = 0;
 const atomicCounter = new (Java.type('java.util.concurrent.atomic.AtomicInteger'))(0);
